@@ -3,3 +3,18 @@
 # Напишите функцию magic(), принимающую эти аргументы, и выясните,
 # можно ли разделить сумму чисел последовательности на число  Х без остатка. 
 # В качестве ответа возвращается bool, если можно то True иначе False.
+
+import os
+import random
+
+# code begins
+clear = lambda: os.system('cls')
+clear()
+
+def right_number(num):
+    if (num > 0):
+        
+l1 = [random.randrange(5,100), random.randrange(0,99)]
+
+
+num = int(input("Введите положительное число:"))
