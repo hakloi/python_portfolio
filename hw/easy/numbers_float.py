@@ -4,15 +4,37 @@
 # Требуется написать функцию eqv(a, b, c), которая принимает 3 числа.
 # Числа a и b (оба дробные, каждое больше 1000 но меньше 99999) складываются. 
 # Числа А и Б заданы в коде и задана в коде их сумма С, тип данных float. 
-# или можно 
-
 # Затем эта сумма сравнивается с числом “с” с определенной степенью точности eps. 
 # Точность eps равняется 0.01% от большего из чисел - a или b. 
 # Функция вернет True, если выполняется равенство, иначе False.
 
 import os
-import random
 
 # code begins
 clear = lambda: os.system('cls')
 clear()
+
+# выбрать маленькое число eps (от названия греческой буквы ε — «эпсилон», «epsilon»),
+# и два числа считать равными, если они отличаются не более чем на eps.
+def eqv(a, b, c):
+    if (a>=b):
+        eps = a*0.01/100
+    else:
+        eps = b*0.01/100
+    print("epsilon:", eps)
+        
+    if (c-abs(a+b)==eps):
+        print("\nActual sum", c, "is equal to", a+b)
+        print(True)
+    else:
+        print("\nActual sum", c, "is not equal to", a+b)
+        print(False)  
+
+a = 0.3
+b = 0.6
+c = 0.9
+print("Float number 1:", a)
+print("Float number 2:", b)
+eqv(a,b,c)
+
+
