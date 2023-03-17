@@ -10,11 +10,16 @@ import random
 # code begins
 clear = lambda: os.system('cls')
 clear()
-
-def right_number(num):
-    if (num > 0):
         
-l1 = [random.randrange(5,100), random.randrange(0,99)]
-
-
-num = int(input("Введите положительное число:"))
+def magic(num,l1):
+    a = sum(l1)
+    b = a/num
+    print("Problem:", a, ":", num, "=", b)
+    if (a%num == 0):
+        print("There is no remainder of the division.")
+    else:
+        print("There is remainder of the division.")
+        
+l1 = [random.randrange(5,100) for _ in range(0,99)]
+num = int(input("Positive number: "))
+magic(num, l1)
