@@ -4,10 +4,18 @@
 # массиве S спрос, а в D предложение. определите количество моментов времени,
 # когда рынок находился в равновесии (спрос равен предложению).
 
-import itertools
+import os
+import random
 
+# code begins
+clear = lambda: os.system('cls')
+clear()
 
 s = [23, 65, 76, 89, 54, 12]
 d = [23, 45, 76, 89, 44, 32]
-comparisons = [a == b for (a, b) in itertools.product(s, d)]
-print(comparisons)
+moments_of_equel = []
+for i in range(len(s)): #перебираем элементы списка (в пределах длины первого списка)
+    if s[i] == d[i]:
+        moments_of_equel.append(i) 
+        
+print (moments_of_equel)
