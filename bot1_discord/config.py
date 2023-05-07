@@ -1,0 +1,14 @@
+TOKEN = 'MTEwNDY2ODcwOTk2MTg3OTY1NQ.Ghgfgo.KTtwWF0sfRE3KTXjBbbhzCVMQ4JvTr1Ssst0-4'
+
+POST_ID = 1104807785994129479
+
+ROLES = {
+    '👻': 1104799202518769786, #ghost_game
+    '🪬': 1104799341685768193, #ghost_webtoon
+    '✍️': 1104799392071942195, #writer
+    
+}
+
+EXCROLES = ()
+
+MAX_ROLES_PER_USER = 2
