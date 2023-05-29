@@ -30,6 +30,7 @@ def exception_num(value):
             else:
                 print("Incomprehensible characters!")
                 value = input("Input: ")
+    return int(value)
     
 def exception_str(value):
     while True:
@@ -43,6 +44,21 @@ def exception_str(value):
             else:
                 print("Incomprehensible characters!")
                 value = input("Input: ")
+    return value.title()
+
+def generation(age):
+    if age < 2:
+        print(color.PURPLE +cool_name + color.END +", you're a newborn! What are you doing here?")
+    elif age >= 2 and age < 4: 
+        print(color.GREEN +cool_name + color.END + ", you're a baby! What are you doing here?")
+    elif age >= 4 and age < 13:
+        print(color.CYAN +cool_name + color.END + ", you're a kiddo! Do your mother know what are tou doing?")
+    elif age >= 13 and age < 20:
+        print(color.BLUE +cool_name + color.END + ", you're a teenager! Wanna try to apply documents to FBI?")
+    elif age >= 20 and age < 65:
+        print(color.DARKCYAN +cool_name + color.END + ", you're an adult! Are you ready to serve the country?")
+    elif age >= 65:
+        print(color.YELLOW +cool_name + color.END + ", you're an elderly person! We accept all of ages above 20!")
 
 def transform_name(name):
     lst = list(name)
@@ -57,16 +73,15 @@ print(color.BOLD + "WELCOME TO FBI, KIDDO!".center(shutil.get_terminal_size().co
 
 print("NAME:".center(shutil.get_terminal_size().columns))
 name = input("Input: ")
-name = exception_num(name)
-
+name = exception_str(name)
+cool_name = transform_name(name)
 
 print("SURNAME:".center(shutil.get_terminal_size().columns))
 surname = input("Input: ")
-surname = exception_num(surname)
-
-sex = str(input("SEX (female/male): "))
+surname = exception_str(surname)
 
 print("AGE:".center(shutil.get_terminal_size().columns))
 age = input("Input: ")
 age = exception_num(age)
 
+generation(age)
