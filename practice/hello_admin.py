@@ -29,7 +29,13 @@ def new_name(current_users):
             print("You can't use this name!")
             return 0
         else:
-            print("Welcome, " + color.BOLD + name + color.END)
+            print("Welcome, " + color.BOLD + name + color.END + "!")
             return name
-        
-name = new_name(current_users)     
+
+def print_list(lst):
+    for el in lst:
+        print(el, end=', ')
+     
+name = new_name(current_users)
+if name != 0: current_users.append(name)
+# print_list(current_users)
