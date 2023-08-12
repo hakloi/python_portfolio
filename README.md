@@ -9,9 +9,10 @@ is an algorithm _O(n^2)_ that works by repeatedly selecting the smallest (or lar
 is a sorting algorithm with O(n*log n) time.
 5. [Merge sort]() - 
 the constant in Big O notation can matter sometimes. That’s why quicksort is faster than merge sort
-6. [Breadth-first search (BFS)]() -
-is a diferent kind of search algorithm: one that runs on 
-graphs. 
+6. [Breadth-first search (BFS)](https://github.com/hakloi/python_portfolio/blob/main/practice/algorithms/breadth_first_search.py) -
+is a diferent kind of search algorithm: one that runs on graphs. To implement BFS we use a _queue_.
+7. [Depth-first search (DFS)]() - 
+the algorithm begins at the root node and then it explores each branch before backtracking. It is implemented using _stacks_. 
 
 __Hash tables__ are a powerful data structure because they’re so fast and  they let you model data in a diferent way. It has really fast search, insert, and delete.
 
