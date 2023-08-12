@@ -10,6 +10,11 @@ is a sorting algorithm with O(n*log n) time.
 5. [Merge sort]() - 
 the constant in Big O notation can matter sometimes. That’s why quicksort is faster than merge sort
 6. [Breadth-first search (BFS)]() -
-generally it allows you to find the shortest distance between two things 
+is a diferent kind of search algorithm: one that runs on 
+graphs. 
 
 __Hash tables__ are a powerful data structure because they’re so fast and  they let you model data in a diferent way. It has really fast search, insert, and delete.
+
+__Queue__ - is a data structure.
+
+__Stack__ - is a data structure with FIFO.
