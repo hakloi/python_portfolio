@@ -7,8 +7,8 @@ is an algorithm _O(n^2)_ that works by repeatedly selecting the smallest (or lar
 3. [Recursion](https://github.com/hakloi/python_portfolio/blob/main/practice/algorithms/recursion.py) -  is when a function calls itself. Also it uses stack. The stack is a simple data structure. Recursion is __VERY IMPORTANT__ for functional language like Haskell that doesn't have a loop.
 4. [Quicksort](https://github.com/hakloi/python_portfolio/blob/main/practice/algorithms/quicksort.py) - 
 is a sorting algorithm with O(n*log n) time.
-5. Merge sort - 
+5. [Merge sort]() - 
 the constant in Big O notation can matter sometimes. That’s why quicksort is faster than merge sort
-
+6. [Breadth-first search (BFS)]() - 
 
 __Hash tables__ are a powerful data structure because they’re so fast and  they let you model data in a diferent way. It has really fast search, insert, and delete.
