@@ -1,1 +1,1 @@
-# new alg
+# new algorithm
