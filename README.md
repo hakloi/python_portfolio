@@ -16,9 +16,9 @@ __Graphs__ are data structures used to represent "connections" between pairs of 
 is a diferent kind of search algorithm: one that runs on graphs. To implement BFS we use a _queue_.  Breadth-irst search will ind you the path with the fewest segments.
 7. [Depth-first search (DFS)]() - 
 the algorithm begins at the root node and then it explores each branch before backtracking. It is implemented using _stacks_. \
-8. [Dijkstra’s algorithm]() -
+8. [Dijkstra’s algorithm](https://github.com/hakloi/python_portfolio/blob/main/practice/algorithms/Dijkstras.py) -
 only works with directed acyclic graphs, called _DAGs_ for short. __You can’t use Dijkstra’s algorithm if you have negative-weight edges.__
-9. Bellman-Ford algorithm - 
+9. [Bellman-Ford algorithm]() - 
 
 __Hash tables__ are a powerful data structure because they’re so fast and  they let you model data in a diferent way. It has really fast search, insert, and delete.
 
