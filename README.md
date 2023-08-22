@@ -12,8 +12,10 @@ the constant in Big O notation can matter sometimes. That’s why quicksort is f
 
 __Graphs__ are data structures used to represent "connections" between pairs of elements.
 
+__Deque__ or a "double-ended queue" is a data structure that supports operations at both ends (i.e. enqueuing and dequeuing) elements in a queue. To add an element at the _beginning_ of the deque, we use the _deque.appendleft_ method, and to add an element at the _end_ of the deque, we use the _deque.appendright_ method. 
+
 6. [Breadth-first search (BFS)](https://github.com/hakloi/python_portfolio/blob/main/practice/algorithms/breadth_first_search.py) -
-is a diferent kind of search algorithm: one that runs on graphs. To implement BFS we use a _queue_.  Breadth-irst search will ind you the path with the fewest segments.
+is a different kind of search algorithm: one that runs on graphs. To implement BFS we use a _queue_.  Breadth-first search will find you the path with the fewest segments.
 7. [Depth-first search (DFS)]() - 
 the algorithm begins at the root node and then it explores each branch before backtracking. It is implemented using _stacks_. \
 8. [Dijkstra’s algorithm](https://github.com/hakloi/python_portfolio/blob/main/practice/algorithms/Dijkstras.py) -
