@@ -20,6 +20,10 @@ the algorithm begins at the root node and then it explores each branch before ba
 only works with directed acyclic graphs, called _DAGs_ for short. __You can’t use Dijkstra’s algorithm if you have negative-weight edges.__
 9. [Bellman-Ford algorithm]() - 
 
+__Sets__ - are like lists, except sets can’t have duplicates. Also set has some interesting operations on sets, like union, intersection, and diference.
+
+10. [Greedy Algorithm]() -
+
 __Hash tables__ are a powerful data structure because they’re so fast and  they let you model data in a diferent way. It has really fast search, insert, and delete.
 
 __Queue__ - is a FIFO data structure (First In, First Out). There are two only operations - _enqueue_ and _dequeue_.
