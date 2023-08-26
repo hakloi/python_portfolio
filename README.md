@@ -25,9 +25,17 @@ only works with directed acyclic graphs, called _DAGs_ for short. __You can’t 
 __Sets__ - are like lists, except sets can’t have duplicates. Also set has some interesting operations on sets, like union, intersection, and diference.
 
 10. [Greedy Algorithm]() -
+optimize locally, hoping to end up with a global optimum. They are easy to write and fast to run, so they make good approximation algorithms.
 
 __Hash tables__ are a powerful data structure because they’re so fast and  they let you model data in a diferent way. It has really fast search, insert, and delete.
 
 __Queue__ - is a FIFO data structure (First In, First Out). There are two only operations - _enqueue_ and _dequeue_.
 
 __Stack__ - is a LIFO data structure (Last In, First Out).
+
+### NP-complete problems: have no known fast solution!
+1. [Travelling Salesperson]()
+
+2. [Max clique problem]() 
+
+3. [Graph coloring problem]()
