@@ -1,1 +1,1 @@
-# the most confusion alg
+# the most confusion algorithm
