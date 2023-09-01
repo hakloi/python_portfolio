@@ -33,7 +33,9 @@ Dynamic programming is useful when you’re trying to optimize  something given 
         <li>Levenshtein distance algorithm</li> 
     </ul> 
 
-12. 
+12. [K-Nearest Neighbours]() - 
+is one of the most basic essential classification algorithms in Machine Learning. The main features of KNN: classification and regression. Also it uses Pythogorean formula:
+<code> ((x1-x2)(y1-y2))^1/2</code>
 
 __Hash tables__ are a powerful data structure because they’re so fast and  they let you model data in a diferent way. It has really fast search, insert, and delete.
 
