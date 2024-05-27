@@ -23,6 +23,6 @@
 # установленным на кондиционере желаемой температуре tcond и режиму работы определяет 
 # температуру, которая установится в комнате через час.
 
-n="chani_gouloo"
-print(n.capitalize())
-print(n.title().replace("_",""))
+# n="chani_gouloo"
+# print(n.capitalize())
+# print(n.title().replace("_",""))
