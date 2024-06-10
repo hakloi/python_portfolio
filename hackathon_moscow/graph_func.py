@@ -22,24 +22,28 @@ def find_coordinate(point_id):
   for row in points.iter_rows(min_row=2):
     if row[0].value == point_id:
       name = row[3].value
-      latitude = row[1].value
-      longitude = int(row[2].value) # там нет чисел float в табл IntegrVelocity
+      latitude = row[1].value # широта 
+      longitude = int(row[2].value) # lon там нет чисел float в табл IntegrVelocity = долгота
       longitude_coordinate = None
       latitude_coordinate = None
       
+      # поиск похожей широты в IntegrVelocity
+      min_difference = float('inf')
+      for col in sheet_lat.iter_cols():
+        for cell in col:
+          if cell.value is not None:  # проверяем, что ячейка не пустая
+            difference = abs(cell.value - latitude)
+            if difference < min_difference:
+              min_difference = difference
+              latitude_coordinate = cell.coordinate
+            
       # ищем ячейку долготы
       for col in sheet_longitude.iter_cols():
         for cell in col:
           if cell.value == longitude:
             longitude_coordinate = cell.coordinate
-
-      # ищем ячейку широты
-      for col in sheet_lat.iter_cols():
-        for cell in col:
-          if cell.value == latitude:
-            latitude_coordinate = cell.coordinate
             
-      return name, latitude, longitude, longitude_coordinate, latitude_coordinate #если нет числа
+      return name, latitude, longitude,  latitude_coordinate, longitude_coordinate #если нет числа
   return None
 
 # 0	73.1	80
