@@ -13,6 +13,7 @@ wb_integr_velocity = openpyxl.load_workbook(filename='IntegrVelocity.xlsx')
 points = wb['points']
 sheet_longitude= wb_integr_velocity['lon']
 sheet_lat= wb_integr_velocity['lat']    
+sheet_mar= wb_integr_velocity['03-Mar-2020']  
 
 # необходимо сделать фукнцию, которая бы считывала (point_id, latitude, longitude, point_name)
 # брала в переменные отдельные latitude, longitude - найти эти переменные в IntegrVelocity (пример: A1)
@@ -43,9 +44,12 @@ def find_coordinate(point_id):
           if cell.value == longitude:
             longitude_coordinate = cell.coordinate
             
+      # ищем значение на листе '03-Mar-2020'
+            
       return name, latitude, longitude,  latitude_coordinate, longitude_coordinate #если нет числа
   return None
 
+# CHECK:
 # 0	73.1	80
 # 1	69.4	86.15
 # 2	69.9	44.6
