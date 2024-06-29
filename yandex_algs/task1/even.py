@@ -4,10 +4,12 @@ import os
 clear = lambda: os.system('cls')
 clear()
 
-def even(num):
+
+# binary
+def binary_even(num):
     if num % 10 == 0:
         return True
     else: return False
     
-res = even(int(input("Input number: ")))
+res = binary_even(int(input("Input number: ")))
 print(res)
