@@ -30,14 +30,11 @@ os.system('cls') #clear
 #     print(i)
 
 
-s = int(input())
-e = int(input())
+# s= 0.0
 
-if e > s:
-    for el in range(e, s + 1):
-        print(el, end=" ")
-# elif 
-else:
-    for el in range(s, e + 1, -1):
-        print(el, end=" ")
-    
+# while (price := float(input())) != 0:
+#     if price >= 500:
+#         price *= 0.9
+#     s += price
+
+# print(s)
