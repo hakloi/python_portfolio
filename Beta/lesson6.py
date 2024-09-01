@@ -15,12 +15,12 @@ os.system('cls')
 # for i, letter in enumerate(text):
 #     print(f"{i}. {letter}")
 
-word = '4'
+word = 'n'
 # word[1] = 'u'
-print(word.islower())
-print(word.isupper())
-print(word.isalpha())
-print(word.isalnum())
+# print(word.islower())
+# print(word.isupper())
+# print(word.isalpha())
+# print(word.isalnum())
 
 # text = "Привет, мир!"
 # print(text[8:11]) #диапозон

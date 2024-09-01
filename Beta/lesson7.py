@@ -21,3 +21,12 @@ os.system('cls')
 # print(id_num.zfill(5))
 # print(id_num.zfill(10))
 # print(id_num.zfill(15))
+
+# СПИСКИ
+# numbers = [10, 20, 30, 40, 50]
+# print(numbers[:-2]) 
+# print(numbers[::-1]) # visa versa
+# print(numbers[::3]) # step 
+
+
+numbers = [10, 20, 30, 40, 50]
