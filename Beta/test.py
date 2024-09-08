@@ -42,3 +42,53 @@ os.system('cls')
 #         res_n = summ
 #         res_name = name
 # print(res_name)
+
+# count = int(input())
+# flag = 'YES'
+# for i in range(count):
+#     word = input()
+#     if (word[0] not in 'абв'):
+#         flag = 'NO'
+        
+# print(flag)
+
+# n = int(input())
+# res = ''
+
+# for i in range(n):
+#     num = input()
+#     great = 0
+#     for el in num:
+#         if int(el) > great:
+#             great = int(el)
+#     res += str(great)
+    
+# print(res)
+
+# n = int(input())
+
+# print("A B C")
+# for i in range(1,n-1):
+#     for j in range(1, n-1):
+#         k = n-i-j
+#         if k > 0:
+#             print(i, j, k)
+
+
+# n = int(input())
+# count_primes = 0 
+
+# for i in range(n):
+#     num = int(input())
+    
+#     is_prime = True
+#     if num <= 1:
+#         is_prime = False
+#     else:
+#         for j in range(2,  int(num ** 0.5) + 1):
+#             if (num % j == 0):
+#                 is_prime = False
+#                 break
+#     if is_prime == True:
+#         count_primes += 1
+# print(count_primes)
