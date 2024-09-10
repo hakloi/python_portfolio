@@ -1,4 +1,4 @@
-s = "In the hole in the ground there lived a hobbit"
+s = input()
 # выходные данные
 # In th a devil ereht dnuorg eht ni eloh ehobbit
 
