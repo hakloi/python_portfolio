@@ -2,11 +2,12 @@
 # два раза. Удалите из этой строки первое и последнее 
 # вхождение буквы h, а также все символы, находящиеся между ними.
 
-# s = input()
-s = 'In the hole in the ground there lived a hobbit'
+s = input()
+# s = 'In the hole in the ground there lived a hobbit'
 # In tobbit
 
 first_h = s.find('h')
 last_h = s.rfind('h')
 
-print(s[:first_h] + s[last_h:])
+if first_h != -1 and last_h != -1:
+    print(s[:first_h] + s[last_h + 1:]) 
