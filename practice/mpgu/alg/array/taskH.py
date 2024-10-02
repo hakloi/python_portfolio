@@ -1,26 +1,21 @@
-x = int(input()) 
-n = int(input())  
+x = int(input())
+n = int(input())
+elements = []
 
-table = [list(map(int, input().split())) for _ in range(n)]
+for i in range(n):
+    row = list(map(int, input().split()))
+    elements.append(row)
 
-for col in 
-# if x in table:
-#     print('YES')
-# else:
-#     print('NO')
+m = len(elements[0]) #смотрим сколько было введено элементов,
+                    # иначе если сделать m = n, то это будет ссылка на объект n 
 
-# Входные данные
-# В первой строке число X, не превышающее по модулю 2*109. 
-# Во второй строке число N (1 <= N <= 100), В следующих N строках 
-# по N целых чисел, не превышающих по модулю 2*109 – числа в ячейках таблицы.
-
-# Выходные данные
-# Для каждого столбца выведите YES, если в нем есть число Х, и NO в противном случае. (Каждый ответ с новой строки)
-
-# Примеры
-# входные данные
-# 1789
-# 1
-# 1789
-# выходные данные
-# YES
+for col in range(m):
+    found = False
+    for row in range(n):
+        if elements[row][col] == x:
+            found = True
+            break
+    if found:
+        print("YES")
+    else:
+        print("NO")
