@@ -1,9 +1,7 @@
-hi
-hi
-what is your name
-my name is bond
-james bond
-my name is damme
-van damme
-claude van damme
-jean claude van damme
+DEPOSIT Ivanov 100
+INCOME 5
+BALANCE Ivanov
+TRANSFER Ivanov Petrov 50
+WITHDRAW Petrov 100
+BALANCE Petrov
+BALANCE Sidorov
