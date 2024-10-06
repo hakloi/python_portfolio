@@ -13,6 +13,7 @@
 #             max_char = char
 
 # print(max_char)
+
 import math
 
 a = int(input())
@@ -23,22 +24,32 @@ x = []
 
 def roots(a, b, c):
     if a != 0:
-        if b != 0 and c != 0:
-            discr = b ** 2 - 4 * a * c
-            if discr > 0:
-                x1 = (-b + math.sqrt(discr)) / 2 * a
-                x2 = (-b - math.sqrt(discr)) / 2 * a
-                x.append(x1)
-                x.append(x2)
-            elif discr == 0:
-                x.append(-b / (2 * a))
-            else:
-                print('Нет корней')
-        elif b != 0 and c == 0:
-            
-            
-            
-            
+        discr = b ** 2 - 4 * a * c 
+        print(f'Дискриминант: {discr}')
         
-        
-print(roots(a, b, c))
+        if discr > 0:
+            x1 = (-b + math.sqrt(discr)) / (2 * a)
+            x2 = (-b - math.sqrt(discr)) / (2 * a)
+            x.append(x1)
+            x.append(x2)
+        elif discr == 0:
+            x1 = -b / (2 * a)
+            x.append(x1)
+        else:
+            print('Нет вещественных корней')
+    elif b != 0:
+        # Линейное уравнение bx + c = 0
+        x1 = -c / b
+        x.append(x1)
+    else:
+        if c == 0:
+            print("x может быть любым числом (бесконечное количество решений)")
+        else:
+            print("Нет решений")
+
+roots(a, b, c)
+
+if x != []:
+    print(*sorted(x, reverse=True))
+else:
+    print('Корней нет')
