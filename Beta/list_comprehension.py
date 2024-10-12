@@ -91,4 +91,45 @@
 # print(res)
 # {15: [1, 3, 5, 15], 36: [1, 2, 3, 4, 6, 9, 12, 18, 36], 49: [1, 7, 49]}
 
-string = 'Российская Федерация'
+# string = 'Российская Федерация'
+# abr = ''.join([x[0] for x in string.upper().split()])
+# print(abr)
+
+# 'РФ'
+
+
+# numbers = [3, 1, 2, 3, 2, 2, 1]
+
+# res = '-'.join((str(num) for num in sorted(set(numbers))))
+# print(res)
+    
+# '1 - 2 - 3'
+
+
+# rle = [('a', 2), ('b', 3), ('c', 1)]
+# res = ''.join(str(w) * f for w, f in rle)
+# print(res)
+# 'aabbbc'
+
+
+# n = int(input())
+# frequency = {}
+
+# for i in range(n):
+#     surname = input()
+#     frequency[surname] = frequency.get(surname, 0) + 1
+
+# summa = sum(v for v in frequency.values() if v > 1)
+
+# print(summa)
+
+n = int(input())
+frequency = {}
+
+for i in range(n):
+    surname = input()
+    frequency[surname] = frequency.get(surname, 0) + 1
+
+for k, v in frequency.items():
+    if v > 1:
+        print(f"{k} - {v}")
