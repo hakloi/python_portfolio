@@ -123,13 +123,92 @@
 
 # print(summa)
 
-n = int(input())
-frequency = {}
+# n = int(input())
+# frequency = {}
 
-for i in range(n):
-    surname = input()
-    frequency[surname] = frequency.get(surname, 0) + 1
+# for i in range(n):
+#     surname = input()
+#     frequency[surname] = frequency.get(surname, 0) + 1
+    
+# namesake = {k: v for k, v in frequency.items() if v > 1}
 
-for k, v in frequency.items():
-    if v > 1:
-        print(f"{k} - {v}")
+# if namesake:
+#     for k, v in sorted(namesake.items()):
+#         print(f"{k} - {v}")
+# else:
+#     print("Однофамильцев нет")
+        
+# n = int(input())
+# meals = {input(): 0 for _ in range(n)}
+
+# m = int(input())
+# for i in range(m):
+#     amount = int(input())
+#     for j in range(amount):
+#         meal = input()
+#         if meal in meals.keys():
+#             meals[meal] += 1
+
+# res = [k for k, v in meals.items() if v == 0]
+# res.sort()
+# print(*res, sep="\n")
+
+# done = []
+# for j in range(m):
+    
+# 5
+# Овсянка
+# Рис
+# Суп
+# Манная каша
+# Рыба
+# 2
+# 3
+# Рис
+# Суп
+# Рыба
+# 2
+# Рис
+# Рыба
+
+# --------------------------------
+
+
+n = int(input()) #4
+goods = [input() for _ in range(n)] #
+
+recipies = {}
+m = int(input()) #3
+for _ in range(m):
+    dish = input() #тосты
+    prod_num = int(input()) #2
+    prods = [input() for _ in range(prod_num)]
+    recipies[dish] = prods
+
+possible_dishes = []
+for dish, prods in recipies.items():
+    if all(prod in goods for prod in prods):  
+        possible_dishes.append(dish)
+    
+if possible_dishes:
+    possible_dishes.sort()
+    print(*possible_dishes, sep="\n")
+else:
+    print("Готовить нечего")
+
+# 4
+# Яблоки
+# Хлеб
+# Варенье
+# Картошка
+# 3
+# Тосты
+# 2
+# Хлеб
+# Варенье
+# Яблочный Сок
+# 1
+# Яблоки
+# Яичница
+# 1
+# Яйца
