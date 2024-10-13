@@ -174,27 +174,27 @@
 # --------------------------------
 
 
-n = int(input()) #4
-goods = [input() for _ in range(n)] #
+# n = int(input()) #4
+# goods = [input() for _ in range(n)] #
 
-recipies = {}
-m = int(input()) #3
-for _ in range(m):
-    dish = input() #тосты
-    prod_num = int(input()) #2
-    prods = [input() for _ in range(prod_num)]
-    recipies[dish] = prods
+# recipies = {}
+# m = int(input()) #3
+# for _ in range(m):
+#     dish = input() #тосты
+#     prod_num = int(input()) #2
+#     prods = [input() for _ in range(prod_num)]
+#     recipies[dish] = prods
 
-possible_dishes = []
-for dish, prods in recipies.items():
-    if all(prod in goods for prod in prods):  
-        possible_dishes.append(dish)
+# possible_dishes = []
+# for dish, prods in recipies.items():
+#     if all(prod in goods for prod in prods):  
+#         possible_dishes.append(dish)
     
-if possible_dishes:
-    possible_dishes.sort()
-    print(*possible_dishes, sep="\n")
-else:
-    print("Готовить нечего")
+# if possible_dishes:
+#     possible_dishes.sort()
+#     print(*possible_dishes, sep="\n")
+# else:
+#     print("Готовить нечего")
 
 # 4
 # Яблоки
@@ -212,3 +212,41 @@ else:
 # Яичница
 # 1
 # Яйца
+# def trans_bin(nums):
+#     res_list = []
+#     for num in nums:
+#         term = bin(num)
+#         res_list.append(term[2:])
+#     return res_list
+
+
+# numbers = list(map(int, input().split()))
+# nums = trans_bin(numbers)
+# done = []
+
+# for num in nums:
+#     dictionary = {}
+#     dictionary["digits"] = len(num)
+#     dictionary["units"] = num.count("1")
+#     dictionary["zeroes"] = num.count("0")
+#     done.append(dictionary)
+
+# print(done)
+#  {
+#         "digits": 3,
+#         "units": 2,
+#         "zeros": 1
+#     },
+
+
+# 5 8 12
+
+
+# def trans_bin(nums):
+#     return [bin(num)[2:] for num in nums] 
+
+# numbers = list(map(int, input().split()))  
+
+# done = [{"digits": len(num), "units": num.count("1"), "zeros": num.count("0")} for num in trans_bin(numbers)]
+
+# print(done)
