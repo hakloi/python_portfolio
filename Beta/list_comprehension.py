@@ -250,3 +250,28 @@
 # done = [{"digits": len(num), "units": num.count("1"), "zeros": num.count("0")} for num in trans_bin(numbers)]
 
 # print(done)
+
+# seen = set()
+
+# while (phrase := input()) != '':
+#     animals = phrase.split()
+#     for i in range(len(animals)):
+#         if animals[i] == "зайка":
+#             if i > 0:
+#                 seen.add(animals[i - 1])
+#             if i < len(animals) - 1:
+#                 seen.add(animals[i + 1])
+
+# seen = list(seen)
+# seen.sort()
+# print(*seen, sep="\n")
+
+
+# березка елочка зайка волк березка
+# сосна зайка сосна елочка зайка медведь
+# сосна сосна сосна белочка сосна белочка
+
+# волк
+# елочка
+# медведь
+# сосна
