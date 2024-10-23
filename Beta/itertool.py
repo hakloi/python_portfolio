@@ -57,12 +57,40 @@ os.system('cls')
 # мыло, манка
 # молоко, хлеб, сыр
 
-import itertools
+# import itertools
 
-m = input().split(", ")
-p = input().split(", ")
-d = input().split(", ")
+# m = input().split(", ")
+# p = input().split(", ")
+# d = input().split(", ")
 
-res = itertools.chain(m, p, d)
-for i, v in enumerate(sorted(list(res)), 1):
-    print(f"{i}. {v}")
+# res = itertools.chain(m, p, d)
+# for i, v in enumerate(sorted(list(res)), 1):
+#     print(f"{i}. {v}")
+
+# from itertools import product
+# suit = input()
+
+# nominals = [2, 3, 4, 5, 6, 7, 8, 9, 10, "валет", "дама", "король", "туз"]
+# suits = ["пик", "бубен", "червей", "треф"]
+
+# suits.remove(suit)
+
+# for s, n in product(nominals, suits):
+#     print(f"{s} {n}")
+
+# from itertools import *
+
+# n = int(input())
+# names = []
+
+# for i in range(n):
+#     name = input()
+#     names.append(name)
+
+# for i in combinations(names, 2):
+#     print(*i, sep=" - ") 
+
+
+# Аня - Боря
+# Аня - Вова
+# Боря - Вова
