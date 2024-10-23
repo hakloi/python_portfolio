@@ -94,3 +94,56 @@ os.system('cls')
 # Аня - Боря
 # Аня - Вова
 # Боря - Вова
+
+# from itertools import islice, cycle
+# m = int(input())
+
+# porridge = list(input() for _ in range(m))
+
+# n = int(input())
+# res = list(islice(porridge, 0, n))
+
+# count = 0
+# for i in cycle(porridge):
+#     if count < n:
+#         print(i)
+#         count += 1
+#     else:
+#         break
+
+
+# l2=itertools.cycle(l1)
+# print (l2)#Output:<itertools.cycle object at 0x02F794E8>
+
+# count=0
+# for i in l2:
+#     #It will end in infinite loop. So have to define terminating condition.
+#     if count > 15:
+#         break
+#     else:
+#         print (i,end=" ")#Output:1 2 3 1 2 3 1 2 3 1 2 3 1 2 3 1
+#         count+=1
+
+
+# ввод
+# 5
+# Манная
+# Гречневая
+# Пшённая
+# Овсяная
+# Рисовая
+# 12
+
+# вывод
+# Манная
+# Гречневая
+# Пшённая
+# Овсяная
+# Рисовая
+# Манная
+# Гречневая
+# Пшённая
+# Овсяная
+# Рисовая
+# Манная
+# Гречневая
