@@ -147,3 +147,107 @@ os.system('cls')
 # Рисовая
 # Манная
 # Гречневая
+
+
+#  x = ['a', 'b', 'c']
+# >>> y = ['1', '2']
+# >>> list(product(x, y))
+# # [('a', '1'), ('a', '2'), ('b', '1'), ('b', '2'), ('c', '1'), ('c', '2')]
+
+# >>> list(product(y, repeat=3))
+# # [('1', '1', '1'), ('1', '1', '2'), ('1', '2', '1'), ('1', '2', '2'), 
+# # ('2', '1', '1'), ('2', '1', '2'), ('2', '2', '1'), ('2', '2', '2')]
+
+# from itertools import product
+
+# n = int(input())
+# nums = list(range(1, n + 1))
+
+# for i, j in product(nums, repeat=2):
+#     if j == n:  
+#         print(i * j)
+#     else:
+#         print(i * j, end=" ")
+
+# for i in range(n):
+#     step = 1
+#     print(list(product(i, step)))
+
+# from itertools import product
+
+# n = int(input())
+
+# names = ["А", "Б", "В"]
+# nums = list(range(1, n + 1))
+
+# print(*names)
+
+# for i, j, k in product(nums, repeat=3):
+#     if i + j + k == n: 
+#         print(f"{i} {j} {k}")
+
+
+# ввод : 5
+# вывод
+# А Б В
+# 1 1 3
+# 1 2 2
+# 1 3 1
+# 2 1 2
+# 2 2 1
+# 3 1 1
+
+# n = input()
+# a, b, c = int(n[0]), int(n[1]), int(n[2])
+
+# minimum = min(a, b, c)
+# maximum = max(a, b, c)
+# middle = a + b + c - minimum - maximum  
+
+# if minimum + maximum == middle * 2:
+#     print("YES")
+# else:
+#     print("NO")
+
+
+# a = int(input())
+# b = int(input())
+# c = int(input())
+
+# if ((a + b) > c) and ((a + c) > b) and ((c + b) > a):
+#     print("YES")
+# else:
+#     print("NO")
+
+
+# Требуется поменять местами первый элемент массива с максимальным.
+
+# Входные данные
+# В первой строке вводится одно натуральное число, не превосходящее 
+# 1000 – размер массива. Во второй строке задаются N чисел – элементы массива 
+# (целые числа, не превосходящие по модулю 1000).
+
+# n = int(input())
+# nums = list(map(int, input().split()))
+
+# greater = nums[0]
+
+# for i in range(n):
+#     ind = 0
+#     if nums[i] > greater:
+#         greater = nums[i]
+#         ind = i
+#     nums[ind] = nums[0]
+#     nums[0] = greater
+
+# print(*nums)
+
+# Выходные данные
+# Вывести получившийся массив. Если максимальных элементов несколько, требуется поменять первый из них.
+
+# Примеры
+# входные данные
+# 5
+# 1 2 3 4 5
+# выходные данные
+# 5 2 3 4 1
