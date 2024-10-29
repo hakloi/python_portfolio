@@ -1,16 +1,3 @@
-# client_size = int(input())
-# shoe_sizes = sorted(map(int, input().split()))
-
-# count = 0 
-# last_size = client_size - 3 
-
-# for size in shoe_sizes:
-#     if size >= client_size and size >= last_size + 3:
-#         count += 1  
-#         last_size = size 
-
-# print(count)
-
 def merge_sort(lst):
     if len(lst) > 1:
         mid = len(lst) // 2
@@ -36,11 +23,8 @@ def merge_sort(lst):
             lst[k] = right[j] 
             j+=1
             k+=1
-    
-    
-lst = list(map(int, input().split()))
-print(len(lst))
-merge_sort(lst)
-print(*lst)
+    return lst
 
-# 5 2 3 6 84 9 8
+n = int(input())
+lst = list(map(int, input().split()))
+print(*merge_sort(lst))
