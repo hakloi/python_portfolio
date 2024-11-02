@@ -143,29 +143,128 @@
 #   Толя  
 #                   Вася  
 #    II      I      III  
-import math 
+# import math 
 
-a = float(input())
-b = float(input())
-c = float(input())
+# a = float(input())
+# b = float(input())
+# c = float(input())
 
-if a == 0:
-    if b == 0:
-        if c == 0:
-            print("Infinite solutions")
-        else: 
-            print("No solution")
-    else: 
-        x = -c / b
-        print(f"{x:.2f}")
-else:
-    dis = b * b - 4 * a * c
-    if dis > 0:
-        x1 = (-b - math.sqrt(dis)) / (2 * a)
-        x2 = (-b + math.sqrt(dis)) / (2 * a)
-        print(f"{min(x1, x2):.2f} {max(x1, x2):.2f}")
-    if dis == 0:
-        x = -b / (2 * a)
-        print(f"{x:.2f}")
-    else:
-        print("No solution")
+# if a == 0:
+#     if b == 0:
+#         if c == 0:
+#             print("Infinite solutions")
+#         else: 
+#             print("No solution")
+#     else: 
+#         x = -c / b
+#         print(f"{x:.2f}")
+# else:
+#     dis = b * b - 4 * a * c
+#     if dis > 0:
+#         x1 = (-b - math.sqrt(dis)) / (2 * a)
+#         x2 = (-b + math.sqrt(dis)) / (2 * a)
+#         print(f"{min(x1, x2):.2f} {max(x1, x2):.2f}")
+#     if dis == 0:
+#         x = -b / (2 * a)
+#         print(f"{x:.2f}")
+#     else:
+#         print("No solution")
+
+# import itertools
+
+# n = int(input())
+# m = int(input())
+
+# ln = len(str(n * m))
+
+# for i, j in itertools.product(range(1, n + 1), range(1, m + 1)):
+#     print(f"{((i - 1) * m + j):>{ln}}", end=" ")
+#     if j == m:
+#         print()
+
+# 1 2 3
+# 4 5 6
+
+# n = int(input())
+# lst = []
+
+# for i in range(n):
+#     phrase = input().split(",")
+#     for j in range(len(phrase)):
+#         lst.append(phrase[j].strip())
+    
+# lst.sort()
+# for ind, value in enumerate(lst, 1):
+#     print(f"{ind}. {value}")
+
+# 3
+# картина, корзина, картонка
+# мыло, манка
+# молоко, хлеб, сыр
+
+# import itertools
+
+# n = int(input())
+
+# part = sorted(input() for _ in range(n))
+# for i in itertools.permutations(part, n):
+#     print(", ".join(i))
+    
+# 4
+# Вова
+# Аня
+# Дима
+# Боря
+
+    
+# Аня, Боря, Вова, Дима
+# Аня, Боря, Дима, Вова
+# Аня, Вова, Боря, Дима
+# Аня, Вова, Дима, Боря
+# Аня, Дима, Боря, Вова
+# Аня, Дима, Вова, Боря
+# Боря, Аня, Вова, Дима
+# Боря, Аня, Дима, Вова
+# Боря, Вова, Аня, Дима
+# Боря, Вова, Дима, Аня
+# Боря, Дима, Аня, Вова
+# Боря, Дима, Вова, Аня
+# Вова, Аня, Боря, Дима
+# Вова, Аня, Дима, Боря
+# Вова, Боря, Аня, Дима
+# Вова, Боря, Дима, Аня
+# Вова, Дима, Аня, Боря
+# Вова, Дима, Боря, Аня
+# Дима, Аня, Боря, Вова
+# Дима, Аня, Вова, Боря
+# Дима, Боря, Аня, Вова
+# Дима, Боря, Вова, Аня
+# Дима, Вова, Аня, Боря
+# Дима, Вова, Боря, Аня
+
+# import itertools
+
+# n = int(input())
+
+# part = sorted(input() for _ in range(n))
+# for i in itertools.permutations(part, 3):
+#     print(", ".join(i))
+
+# import itertools
+
+# n = int(input())
+# lst = []
+
+# for i in range(n):
+#     product = input().split(",")
+#     for j in range(len(product)):
+#         lst.append(product[j].strip())
+
+# print(lst)
+
+# for k in itertools.permutations(sorted(lst), 3):
+#     print(" ".join(k))
+    
+# 2
+# печенье, сушки
+# чай, кофе
