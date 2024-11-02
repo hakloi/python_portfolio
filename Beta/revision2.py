@@ -103,3 +103,69 @@
 #     third, forth = forth, third
 
 # print(f"{forth}{(second + third) % 10}{first}")
+
+# p = int(input())
+# v = int(input())
+# t = int(input())
+# fst = p
+
+# if p > v and p > t:
+#     print(f"{'Петя':^24}") 
+#     if v > t:
+#         print(f"{'Вася':^8}") 
+#         print(f"{'Толя':>22}") 
+#     if t > v:
+#         print(f"{'Толя':^8}") 
+#         print(f"{'Вася':>22}") 
+        
+# elif v > p and v > t:
+#     print(f"{'Вася':^24}") 
+#     if t > p:
+#         print(f"{'Толя':^8}") 
+#         print(f"{'Петя':>22}") 
+#     if p > t:
+#         print(f"{'Петя':^8}") 
+#         print(f"{'Толя':>22}") 
+    
+# elif t > p and t > v:
+#     print(f"{'Толя':^24}") 
+#     if v > p:
+#         print(f"{'Вася':^8}") 
+#         print(f"{'Петя':>22}") 
+#     if p > v:
+#         print(f"{'Петя':^8}") 
+#         print(f"{'Вася':>22}") 
+    
+# print(f"{'II':^8}", end="")
+# print(f"{'I':^8}", end="")
+# print(f"{'III':^8}", end="")
+#           Петя          
+#   Толя  
+#                   Вася  
+#    II      I      III  
+import math 
+
+a = float(input())
+b = float(input())
+c = float(input())
+
+if a == 0:
+    if b == 0:
+        if c == 0:
+            print("Infinite solutions")
+        else: 
+            print("No solution")
+    else: 
+        x = -c / b
+        print(f"{x:.2f}")
+else:
+    dis = b * b - 4 * a * c
+    if dis > 0:
+        x1 = (-b - math.sqrt(dis)) / (2 * a)
+        x2 = (-b + math.sqrt(dis)) / (2 * a)
+        print(f"{min(x1, x2):.2f} {max(x1, x2):.2f}")
+    if dis == 0:
+        x = -b / (2 * a)
+        print(f"{x:.2f}")
+    else:
+        print("No solution")
