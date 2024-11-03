@@ -268,3 +268,66 @@
 # 2
 # печенье, сушки
 # чай, кофе
+
+# import itertools
+
+# suit = input()
+# n = input()
+
+# cards = {"пики": "пик", 
+#          "буби": "бубен", 
+#          "трефы": "треф", 
+#          "черви": "червей"}
+
+# dignity = ['2', '3', '4', '5', '6', '7', '8', '9', '10', "валет", "дама", "король", "туз"]
+# dignity.remove(n)
+
+# deck = [f"{d} {i}" for d in dignity for i in cards.values()]
+# suit_value = cards[suit]
+
+# combinations = [
+#     sorted(triple) for triple in itertools.combinations(deck, 3) if any(suit_value in card for card in triple)
+# ]
+# combinations.sort()
+
+# for combo in combinations[:10]:
+#     print(", ".join(combo))
+
+# трефы
+# король
+
+# import itertools
+
+# suit = input()
+# n = input()
+# example = input()
+
+# cards = {"пики": "пик", 
+#          "буби": "бубен", 
+#          "трефы": "треф", 
+#          "черви": "червей"}
+
+# dignity = ['2', '3', '4', '5', '6', '7', '8', '9', '10', "валет", "дама", "король", "туз"]
+# dignity.remove(n)
+
+# suit_value = cards[suit]
+
+# deck = [f"{d} {i}" for d in dignity for i in cards.values()]
+
+# combinations = [
+#     sorted(triple) for triple in itertools.combinations(deck, 3) if any(suit_value in card for card in triple)
+# ]
+# combinations = sorted(", ".join(triple) for triple in combinations)
+
+# if example in combinations:
+#     index = combinations.index(example)
+#     if index + 1 < len(combinations):
+#         print(combinations[index + 1])
+
+
+# for i in combinations():
+#     if combinations[i] == example:
+
+# пики
+# 10
+# 9 пик, король треф, туз червей
