@@ -92,3 +92,32 @@ os.system('cls')
 #     if is_prime == True:
 #         count_primes += 1
 # print(count_primes)
+import json
+
+f1 = input()
+f2 = input()
+
+with open(f1, "r", encoding="utf-8") as filein:
+        nums = []
+        for line in filein:
+            nums.extend(map(int, line.split()))
+        
+        cnt = len(nums)
+        pos = len(list(x for x in nums if x > 0))
+        min_v = min(nums)
+        max_v = max(nums)
+        summa = sum(nums)
+        avg = summa / cnt
+        
+        records = {"count": cnt,
+                "positive_count": pos,
+                "min": min_v,
+                "max": max_v,
+                "sum": summa,
+                "average": f"{avg:.2f}"}
+
+
+with open(f2, "w", encoding="utf-8") as fileout:
+        json.dump(records, fileout, ensure_ascii=False, indent=4) 
+# numbers.txt
+# statistics.json
