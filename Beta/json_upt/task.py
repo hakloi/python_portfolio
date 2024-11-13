@@ -41,3 +41,17 @@
 # queries = [1,2,3,4,5,6]
 # items = [[1,2],[3,2],[2,4],[5,6],[3,5]]
 # print(func(items, queries))
+
+
+def majorityElement(nums):
+        dct = {}
+
+        for el in nums:
+            dct[el] = dct.get(el, 0) + 1
+
+        max_k = max(dct, key=dct.get)
+        
+        return max_k
+        
+nums = [2,2,1,1,1,2,2]
+print(majorityElement(nums))
