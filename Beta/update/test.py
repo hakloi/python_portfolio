@@ -35,22 +35,41 @@
 # 100
 # 0
 
+# from sys import stdin
+# import json
+
+# with open('scoring.json') as file:
+#     data = json.load(file)
+
+# answers = stdin.readlines()
+
+# score = 0
+
+# for tests in data:
+#     point = int(tests['points'] / len(tests['tests']))
+#     for test in tests['tests']:
+#         result = test['pattern']
+#         for answer in answers:
+#             if result == answer.strip('\n'):
+#                 score += point
+
+# print(score)
+
+# import math as m
+
+# x = float(input())
+
+# p1 = m.log(m.pow(x, 3 / 16), 32)
+# p2 = m.pow(x, m.cos((m.pi * x) / (2 * m.e)))
+# p3 = m.pow(m.sin(x / m.pi), 2) 
+# print(p1 + p2 - p3)
+
 from sys import stdin
-import json
+import math as m
 
-with open('scoring.json') as file:
-    data = json.load(file)
+lines = []
+for line in stdin:
+    lines.append(list(map(int, line.split())))
 
-answers = stdin.readlines()
-
-score = 0
-
-for tests in data:
-    point = int(tests['points'] / len(tests['tests']))
-    for test in tests['tests']:
-        result = test['pattern']
-        for answer in answers:
-            if result == answer.strip('\n'):
-                score += point
-
-print(score)
+for arr in lines:
+    print(m.gcd(*arr))
