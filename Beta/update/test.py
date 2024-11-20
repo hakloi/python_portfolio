@@ -64,12 +64,41 @@
 # p3 = m.pow(m.sin(x / m.pi), 2) 
 # print(p1 + p2 - p3)
 
-from sys import stdin
+# from sys import stdin
+# import math as m
+
+# lines = []
+# for line in stdin:
+#     lines.append(list(map(int, line.split())))
+
+# for arr in lines:
+#     print(m.gcd(*arr))
+
+# import math as m
+
+# n, k = map(int, input().split())
+
+# all = m.comb(n, k)
+# fav = m.comb(n - 1, k - 1) 
+
+
+# print(fav, all)
+
+# import math as m
+
+# lst = list(map(int, input().split()))
+
+# res = m.pow(m.prod(lst), (1/len(lst)))
+# print(res)
+
 import math as m
 
-lines = []
-for line in stdin:
-    lines.append(list(map(int, line.split())))
+x1, y1 = map(float, input().split())
+r, angle = map(float, input().split())
 
-for arr in lines:
-    print(m.gcd(*arr))
+x2 = r * m.cos(angle)
+y2 = r * m.sin(angle)
+
+res = m.dist((x1, y1), (x2, y2))
+
+print(res)
