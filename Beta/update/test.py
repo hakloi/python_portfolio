@@ -91,14 +91,25 @@
 # res = m.pow(m.prod(lst), (1/len(lst)))
 # print(res)
 
-import math as m
+# import math as m
 
-x1, y1 = map(float, input().split())
-r, angle = map(float, input().split())
+# x1, y1 = map(float, input().split())
+# r, angle = map(float, input().split())
 
-x2 = r * m.cos(angle)
-y2 = r * m.sin(angle)
+# x2 = r * m.cos(angle)
+# y2 = r * m.sin(angle)
 
-res = m.dist((x1, y1), (x2, y2))
+# res = m.dist((x1, y1), (x2, y2))
 
-print(res)
+# print(res)
+
+
+# n = int(input())
+# names = []
+
+# for i in range(n):
+#     name = input()
+#     names.append(name)
+
+# res = min(names)
+# print(res)
