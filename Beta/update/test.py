@@ -113,3 +113,49 @@
 
 # res = min(names)
 # print(res)
+
+
+# num = int(input())
+# flag = True
+
+# if num < 2:
+#     flag = False
+
+# for i in range(2, int(num ** 0.5) + 1):
+#     if num % i == 0:
+#         flag = False
+#         break
+
+# if flag:
+#     print("YES")
+# else:
+#     print("NO")
+
+# n = int(input())
+# cnt = 0
+
+# for i in range(n):
+#     phrase = input()
+#     if "зайка" in phrase:
+#         cnt += 1
+
+# print(cnt)
+
+# num = input()
+# m = len(num) // 2
+
+# s2 = num[m:] if len(num) % 2 == 0 else num[m + 1:]
+
+# if num[:m] == s2[::-1]:
+#     print("YES")
+# else:
+#     print("NO")
+
+s = input()
+new = ''
+
+for i in range(len(s)):
+    if int(s[i]) % 2 != 0:
+        new += s[i]
+    
+print(new)
