@@ -35,9 +35,9 @@
 # ll.append(1)
 # ll.append(2)
 # ll.append(3)
-# ll.display()  
+# # ll.display()  
 
-def isPalindrome(s):
+# def isPalindrome(s):
     # new = ""
     # for ch in s.lower():
     #     if ch.isalpha():
@@ -48,11 +48,55 @@ def isPalindrome(s):
     # else:
     #     return False
 
-    filtered = [ch.lower() for ch in s if ch.isalnum()]
+#     filtered = [ch.lower() for ch in s if ch.isalnum()]
 
-    return filtered == filtered[::-1]
+#     return filtered == filtered[::-1]
         
         
         
-s = "A man, a plan, a canal: Panama"
-print(isPalindrome(s))
+# s = "A man, a plan, a canal: Panama"
+# print(isPalindrome(s))
+
+# import numpy as np
+
+
+# def make_board(n):
+#     a = np.zeros((n, n), dtype="int8")
+#     a[0::2, 0::2] = 1 
+#     a[1::2, 1::2] = 1
+#     return a
+
+
+# print(make_board(4))
+
+# [[1 0 1 0]
+#  [0 1 0 1]
+#  [1 0 1 0]
+#  [0 1 0 1]]
+
+# import numpy as np
+
+# def snake(w, h, direction='H'):
+#     a = np.arange(1, (w * h) + 1, dtype="int16")
+#     if direction == 'V':
+#         a = a.reshape((w, h)).T
+#         a[:, 1::2] = a[::-1, 1::2]
+#         return a
+    
+#     if direction == 'H':
+#         a = a.reshape((h, w))
+#         a[1::2] = a[1::2, ::-1]
+
+#     return a
+
+
+# # print(snake(5, 3))
+# print(snake(5, 3, direction='V'))
+
+# [[ 1  2  3  4  5]
+#  [10  9  8  7  6]
+#  [11 12 13 14 15]]
+
+# [[ 1  6  7 12 13]
+#  [ 2  5  8 11 14]
+#  [ 3  4  9 10 15]]
