@@ -1,0 +1,13 @@
+{
+    "site": "avito",
+    "city": "Москва",
+    "rooms": 1,
+    "price_range": {
+      "from": 1000000,
+      "to": 5000000
+    },
+    "other_params": {
+      "context": "H4sIAAAAAAAA_wEjANz_YToxOntzOjg6ImZyb21QYWdlIjtzOjc6ImNhdGFsb2ciO312FITcIwAAAA"
+    }
+  }
+  
