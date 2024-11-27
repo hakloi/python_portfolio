@@ -1,8 +1,6 @@
 import cfscrape
 from selectolax.parser import HTMLParser
 import json
-import logging
-from datetime import datetime
 
 def load_config(file_path):
     with open(file_path, "r", encoding="utf-8") as f:
