@@ -1,6 +1,7 @@
 import cfscrape
 from selectolax.parser import HTMLParser
 import json
+import mysql.connector
 
 def load_config(file_path):
     with open(file_path, "r", encoding="utf-8") as f:
@@ -78,24 +79,50 @@ def get_html(url):
     else: 
         print(f"Error: {response.status_code}")
 
+
+def insert_into_mysql(data, city, rooms):
+    conn = mysql.connector.connect(
+        host="localhost",
+        user="hakloi",  
+        password="1608",  
+        database="real_estate"
+    )
+    cursor = conn.cursor()
+
+    insert_query = """
+        INSERT INTO listings (title, price, square, floor, url, city, rooms)
+        VALUES (%s, %s, %s, %s, %s, %s, %s)
+    """
+    
+    for item in data:
+        try:
+            cursor.execute(insert_query, (
+                item['title'], None, item['square'], item['floor'], item['url'], city, rooms
+            ))
+        except Exception as e:
+            print(f"Ошибка вставки: {e}")
+    
+    conn.commit()
+    cursor.close()
+    conn.close()
+
 def main():
     config = load_config('config.json')
-    
     rooms_range = [1, 2, 3]
     url_pool = generate_url_pool(config, rooms_range)
-    # url = 'https://www.avito.ru/moskva/kvartiry/prodam/1-komnatnye-ASgBAgICAkSSA8YQygiAWQ?context=H4sIAAAAAAAA_wEjANz_YToxOntzOjg6ImZyb21QYWdlIjtzOjc6ImNhdGFsb2ciO312FITcIwAAAA&f=ASgBAgECAkSSA8YQygiAWQFFxpoMHXsiZnJvbSI6MTAwMDAwMCwidG8iOjcwMDAwMDB9&s=104'
-    # 3-komnatnye
     
     print("Собранный пул URL:")
     for url in url_pool:
         print(f"URL: {url}")
     
-    print("Демонстрация парсинга:")
-    if url_pool:
-        get_html(url_pool[0])  # Обработка первого URL из пула
-    else:
-        print("Пул URL пуст.")
-    
+    for rooms in rooms_range:
+        print(f"Парсинг данных для {rooms}-комнатных квартир...")
+        config['rooms'] = rooms
+        data = get_html(generate_url(config))
+        if data:
+            insert_into_mysql(data, config['city'], rooms)
+        else:
+            print(f"Нет данных для {rooms}-комнатных квартир.")
     
 if __name__ == '__main__':
     main()
