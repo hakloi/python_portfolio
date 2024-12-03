@@ -49,9 +49,64 @@
 # result2 = month(3, "ru")
 # print(result1, result2)
 
-def split_numbers(s):
-    new = tuple(map(int, s.split()))
-    return new
+# def split_numbers(s):
+#     new = tuple(map(int, s.split()))
+#     return new
 
-result = split_numbers("1 2 3 4 5")
-print(result)
+# result = split_numbers("1 2 3 4 5")
+# print(result)
+
+
+# lst = []
+
+# def modern_print(s):
+#     global lst
+#     if s not in lst:
+#         lst.append(s)
+#         return s
+
+
+# modern_print("Hello!")
+# modern_print("Hello!")
+# modern_print("How do you do?")
+# modern_print("Hello!")
+
+# def can_eat(horse, figure):
+#     x, y = horse
+#     x1, y1 = figure
+    
+#     if abs(x - x1) == 1 and abs(y - y1) == 2:
+#         return True
+#     elif abs(x - x1) == 2 and abs(y - y1) == 1:
+#         return True
+#     else: return False
+
+
+# result = can_eat((5, 5), (6, 6))
+# print(result)
+
+def is_palindrome(s):
+    if isinstance(s, list | tuple):
+        if s[::] == s[::-1]:
+            return True
+        else: 
+            return False
+    
+    elif isinstance(s, str):
+        s = s.lower().replace(" ", "")
+        if s[::] == s[::-1]:
+            return True
+        else: 
+            return False
+    
+    elif isinstance(s, int):
+        s = str(s)
+        if s[::] == s[::-1]:
+            return True
+        else: 
+            return False
+        
+        
+
+result3 = is_palindrome(123)
+print(result3)
