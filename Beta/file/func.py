@@ -85,28 +85,90 @@
 # result = can_eat((5, 5), (6, 6))
 # print(result)
 
-def is_palindrome(s):
-    if isinstance(s, list | tuple):
-        if s[::] == s[::-1]:
-            return True
-        else: 
-            return False
+# def is_palindrome(s):
+#     if isinstance(s, list | tuple):
+#         if s[::] == s[::-1]:
+#             return True
+#         else: 
+#             return False
     
-    elif isinstance(s, str):
-        s = s.lower().replace(" ", "")
-        if s[::] == s[::-1]:
-            return True
-        else: 
-            return False
+#     elif isinstance(s, str):
+#         s = s.lower().replace(" ", "")
+#         if s[::] == s[::-1]:
+#             return True
+#         else: 
+#             return False
     
-    elif isinstance(s, int):
-        s = str(s)
-        if s[::] == s[::-1]:
-            return True
-        else: 
-            return False
+#     elif isinstance(s, int):
+#         s = str(s)
+#         if s[::] == s[::-1]:
+#             return True
+#         else: 
+#             return False
         
         
 
-result3 = is_palindrome(123)
-print(result3)
+# result3 = is_palindrome(123)
+# print(result3)
+
+# def is_prime(num):
+#     for i in range(2, int(num ** 0.5) + 1):
+#         if num % i == 0:
+#             return False
+        
+#     return True
+        
+# result = is_prime(79701)
+# print(result)
+
+# def merge(t1, t2):
+#     res = ()
+#     i, j = 0, 0
+    
+#     while i < len(t1) and j < len(t2):
+#         if t1[i] < t2[j]:
+#             res += (t1[i],)
+#             i += 1
+#         else:
+#             res += (t2[j],)
+#             j += 1
+            
+#     while i < len(t1):
+#         res += (t1[i],)
+#         i += 1
+        
+#     while j < len(t2):
+#         res += (t2[j],)
+#         j += 1
+        
+#     return res
+    
+# result = merge((7, 12), (1, 9, 50))
+# print(result)
+
+#14 6 -> 6 != 0 -> a=6, b = 14 % 6 = 2;
+# 2 != 0; a = 2, b = 6 %2 = 3
+
+def gcd(a, b): 
+    while b != 0: 
+        a, b = b, a % b
+    return a
+
+n = int(input())
+lst = [int(input()) for _ in range(n)]
+
+result = lst[0]
+for num in lst[1:]:
+    result = gcd(result, num)
+    
+print(result)
+
+
+
+
+
+    
+    
+# 2
+# 12
+# 42
