@@ -1,10 +1,21 @@
 class Calculator:
     def __init__(self):
+        """
+        Initializes the calculator with:
+        - sym_table: A dictionary to store variable mappings (A-Z to integer values).
+        - running: A flag to control the main program loop.
+        """
         self.sym_table = {}
         self.running = True
     
     def init_var(self):
-        """Initializing a variable and adding characters to the table."""
+        """
+        Initializing a variable and adding characters to the table.
+        Constraints:
+        - Variable names must be a single letter (A-Z).
+        - Values must be integers.
+        - A maximum of 26 variables can be stored in the symbol table.
+        """
         try:
             print("Available variable names: A-Z only!")
             var, num, op = input("Input var (e.g., A 3 =): ").split()
@@ -23,7 +34,12 @@ class Calculator:
             print("Invalid input format. Example: A 3 =")
             
     def expression(self):
-        """Processinf Postfix++ expression"""
+        """
+        Processinf Postfix++ expression
+        - Expression is evaluated using a stack:
+        - Operands are pushed onto the stack.
+        - Operators pop operands from the stack, perform the operation, and push the result back.
+        """
         try:
             print("You can use nums or vars to create your expression.")
             print("Before you begin - introduce with available operations:")
@@ -52,6 +68,8 @@ class Calculator:
 
             while exp:
                 op = exp.pop(0)
+                print(f"\nProcessing token: {op}")
+                print(f"Stack before: {stack}")
 
                 if op in uno:
                     # unary operations
@@ -84,6 +102,7 @@ class Calculator:
 
                 else:
                     stack.append(resolve_value(op))
+                    print(f"Stack after: {stack}")
 
             print(f"ANSWER: {int(stack[-1])}")
 
@@ -95,7 +114,10 @@ class Calculator:
             print(e)
 
     def show_sym_table(self):
-        """Represent symbol table with user variables"""
+        """
+        Displays the current symbol table.
+        If the table is empty, informs the user.
+        """
         if not self.sym_table:
             print("Symbol table is empty")
         else:
@@ -103,7 +125,9 @@ class Calculator:
                 print(f"{k} = {v}")
 
     def menu(self):
-        """User interface"""
+        """
+        Provides a user interface for interacting with the calculator.
+        """
         print("\nMenu:")
         print("1. Input expression")
         print("2. Initialize variable")
@@ -129,9 +153,16 @@ class Calculator:
             
 
     def run(self):
+        """
+        Starts the calculator.
+        Continues running until the user selects the exit option.
+        """
         while self.running:
             self.menu()
 
 if __name__ == "__main__":
+    """
+    Entry point of the program.
+    """
     calc = Calculator()
     calc.run()
