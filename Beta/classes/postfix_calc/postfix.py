@@ -123,7 +123,29 @@ class Calculator:
         else:
             for k, v in self.sym_table.items():
                 print(f"{k} = {v}")
+                
+    def search_sym_table(self):
+        """
+        Search for a specific symbol in the symbol table.
+        Prompts the user for a single character (A-Z) and checks if it exists in the symbol table.
+        """
+        try:
+            # Prompt the user to input a symbol
+            user_input = input("Enter a variable to search for (A-Z): ").strip().upper()
 
+            # Validate the input: single uppercase letter (A-Z)
+            if len(user_input) == 1 and user_input.isalpha() and 'A' <= user_input <= 'Z':
+                # Check if the variable exists in the symbol table
+                if user_input in self.sym_table:
+                    print(f"Symbol table contains the variable: {user_input} = {self.sym_table[user_input]}")
+                else:
+                    print(f"Symbol table does not contain the variable: {user_input}")
+            else:
+                print("Invalid input. Please enter a single letter (A-Z).")
+        except Exception as e:
+            # Catch unexpected errors and display an appropriate message
+            print(f"An error occurred: {e}")
+            
     def menu(self):
         """
         Provides a user interface for interacting with the calculator.
@@ -132,6 +154,7 @@ class Calculator:
         print("1. Input expression")
         print("2. Initialize variable")
         print("3. View symbol table")
+        print("4. Search in symbol table")
         print("0. Exit")
         
         try:
@@ -143,6 +166,8 @@ class Calculator:
                     self.init_var()
                 case 3:
                     self.show_sym_table()
+                case 4:
+                    self.search_sym_table()
                 case 0:
                     print("Exiting...")
                     self.running = False
