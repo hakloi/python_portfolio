@@ -13,16 +13,16 @@
             
 # print(*lst, sep=" * ")
 
-number = 500
-r = number // 2
-print(number)
+# number = 500
+# r = number // 2
+# print(number)
 
-while (answer := input()) != "Угадал!":
-    if answer == "Меньше":
-        number -= r
-    if answer == "Больше":
-        number += r
+# while (answer := input()) != "Угадал!":
+#     if answer == "Меньше":
+#         number -= r
+#     if answer == "Больше":
+#         number += r
         
-    if r >= 2:
-        r = (r + 1) //2 
-    print(number)
+#     if r >= 2:
+#         r = (r + 1) //2 
+#     print(number)
