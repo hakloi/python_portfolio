@@ -11,3 +11,5 @@ def x(arr, low, high):
     
 arr = [5, 2, 7, 3, 4]
 print(x(arr, 0, len(arr)-1))
+
+print(16 % 4)
