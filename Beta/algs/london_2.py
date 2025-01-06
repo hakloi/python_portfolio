@@ -9,7 +9,7 @@ def x(arr, low, high):
     return i
     
     
-arr = [5, 2, 7, 3, 4]
-print(x(arr, 0, len(arr)-1))
+# arr = [5, 2, 7, 3, 4]
+# print(x(arr, 0, len(arr)-1))
 
-print(16 % 4)
+print(142 % 9)
