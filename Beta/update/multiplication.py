@@ -18,3 +18,17 @@
     
 #     if i < size:
 #         print('-' * (size * width + (size - 1)))
+
+
+# n = int(input())
+
+# cnt = 0
+# for _ in range(n):
+#     num = input()
+    
+#     if num == num[::-1]:
+#         cnt +=1
+        
+# print(cnt)
+
+n = int(input())
