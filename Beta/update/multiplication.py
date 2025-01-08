@@ -32,3 +32,23 @@
 # print(cnt)
 
 n = int(input())
+current_number = 1
+res = []
+
+for i in range(1, n + 1):
+    arr = []
+    for j in range(i):
+        if current_number > n:
+            break
+        arr.append(current_number)
+        current_number += 1
+    line = " ".join(str(el) for el in arr)
+    res.append(line)
+    
+    if current_number > n:
+        break
+    
+
+max_width = len(res[-1])
+for line in res:
+    print(f"{line:^{max_width}}")
