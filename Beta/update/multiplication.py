@@ -111,8 +111,27 @@
 # lst.sort()
 # print(lst)
 
-n = int(input())
 
-for i in range(n):
-    x, y = input().split()
+# treasures = dict()
+
+# for _ in range(count := int(input())):
+#     x, y = input().split()
+#     index = (int(x) // 10, int(y) // 10)
+#     treasures[index] = treasures.get(index, 0) + 1
+
+# print(max(treasures.values()))
+
+toys = []
+unique = {}
+
+for _ in range(int(input())):
+    name, str = input().split(': ')
+    toys.extend(set(str.split(', '))) 
+    
+for toy in sorted(toys):
+    unique[toy] = unique.get(toy, 0) + 1
+    
+for toy in unique:
+    if unique[toy] == 1:
+        print(toy)
     
