@@ -31,24 +31,88 @@
         
 # print(cnt)
 
+# n = int(input())
+# current_number = 1
+# res = []
+
+# for i in range(1, n + 1):
+#     arr = []
+#     for j in range(i):
+#         if current_number > n:
+#             break
+#         arr.append(current_number)
+#         current_number += 1
+#     line = " ".join(str(el) for el in arr)
+#     res.append(line)
+    
+#     if current_number > n:
+#         break
+    
+
+# max_width = len(res[-1])
+# for line in res:
+#     print(f"{line:^{max_width}}")
+
+
+# n = int(input())
+# matrix = [[0] * n for _ in range(n)]
+
+# for layer in range((n + 1) // 2):
+#     num = layer + 1
+    
+    
+# n = int(input())
+
+# matrix = [[0] * n for _ in range(n)]
+
+# for layer in range((n + 1) // 2):
+#     num = layer + 1
+    
+#     for i in range(layer, n - layer):
+#         matrix[layer][i] = num
+        
+#     for i in range(layer + 1, n - layer):
+#         matrix[i][n - layer] = num
+        
+#     for i in range(layer + 1, n - layer):
+#         matrix[n - layer - 1][n - i - 1] = num
+
+#     for i in range(layer + 1, n - layer - 1):
+#             matrix[n - i - 1][layer] = num
+            
+# for row in matrix:
+#     print(" ".join(str(el) for el in row))
+
+
+# num = int(input())
+# res = {}
+
+# for i in range(2, 11):
+#     rem = []
+#     n = num
+#     while n != 0:
+#         if n % i != 0:
+#             rem.append(n % i)
+#         else:
+#             rem.append(0)
+#         n = n // i 
+#     res[i] = sum(rem)
+
+# max_base = max(res, key=res.get)
+
+# print(max_base)
+            
+            
+# lst = [1, 3, 5, 3, 2]
+
+# sorted(lst)
+# print(lst)
+
+# lst.sort()
+# print(lst)
+
 n = int(input())
-current_number = 1
-res = []
 
-for i in range(1, n + 1):
-    arr = []
-    for j in range(i):
-        if current_number > n:
-            break
-        arr.append(current_number)
-        current_number += 1
-    line = " ".join(str(el) for el in arr)
-    res.append(line)
+for i in range(n):
+    x, y = input().split()
     
-    if current_number > n:
-        break
-    
-
-max_width = len(res[-1])
-for line in res:
-    print(f"{line:^{max_width}}")
