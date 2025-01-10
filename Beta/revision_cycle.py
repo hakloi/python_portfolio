@@ -26,3 +26,4 @@
 #     if r >= 2:
 #         r = (r + 1) //2 
 #     print(number)
+
