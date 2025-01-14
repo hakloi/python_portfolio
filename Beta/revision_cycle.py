@@ -27,3 +27,17 @@
 #         r = (r + 1) //2 
 #     print(number)
 
+# import math
+
+# nums = list(map(int, input().replace(";", "").split()))
+# nums = sorted(set(nums))
+# dct_simple_nums = {}
+
+# for num in nums:
+#     simple_nums = [el for el in nums if math.gcd(el, num) == 1 and el != num]
+    
+#     if simple_nums:
+#         dct_simple_nums[num] = simple_nums
+
+# for k, v in dct_simple_nums.items():
+#     print(f"{k} - {', '.join(map(str, v))}")
