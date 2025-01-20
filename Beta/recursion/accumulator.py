@@ -1,6 +1,17 @@
+global res
+res = []
+
 def result_accumulator(func):
-    def wrapper(method="accumulate", *args, **kwargs):
-    
+    def wrapper(*args, method="accumulate", **kwargs):
+        res.append(func(*args, **kwargs))
+        if method == "accumulate":
+            return None
+        elif method == "drop":
+            acc_result = res[:]
+            res.clear()
+            return acc_result
+        
+    return wrapper
     
 @result_accumulator
 def a_plus_b(a, b):
