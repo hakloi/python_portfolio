@@ -1,0 +1,158 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "Hello",
+        "How are you?",
+        "Good day",
+        "What's up",
+        "Yo",
+        "Hi there"
+      ],
+      "responses": [
+        "Hey there, friend 💜",
+        "Hello! I'm here for you.",
+        "Hi! How are you feeling today?",
+        "Good to see you again!",
+        "Hiya — what’s on your mind?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "cya",
+        "see you later",
+        "talk to you soon",
+        "goodbye",
+        "bye friend"
+      ],
+      "responses": [
+        "I'll miss you, {name} 💫",
+        "Take care of yourself.",
+        "Goodbye, and remember — you matter 💜",
+        "See you soon, bestie!",
+        "You’re never truly alone. See you later, {name}!"
+      ]
+    },
+    {
+      "tag": "feeling_sad",
+      "patterns": [
+        "I'm sad",
+        "feeling down",
+        "I feel terrible",
+        "not okay",
+        "bad day",
+        "everything sucks"
+      ],
+      "responses": [
+        "I'm really sorry you're feeling this way. Want to talk about it?",
+        "It's okay to feel sad sometimes. I'm here with you.",
+        "You're not alone. I'm right here, {name} 💜",
+        "Do you want to share what happened?",
+        "Take a deep breath. I'm sending you a virtual hug 🤗"
+      ]
+    },
+    {
+      "tag": "panic_timer",
+      "patterns": [
+        "I feel a panic attack",
+        "Start calming timer",
+        "Help me breathe",
+        "I'm panicking",
+        "Can you help me calm down?"
+      ],
+      "responses": [
+        "Let's breathe together, {name} 💜 Starting a 1-minute calming timer.",
+        "You're not alone. We’ll get through this together — breathing timer starting now.",
+        "Okay, breathe with me, {name}. I’ll guide you through."
+      ]
+    },
+    {
+      "tag": "compliment",
+      "patterns": [
+        "I feel ugly",
+        "I'm not good enough",
+        "I hate myself",
+        "I'm a failure",
+        "I'm useless"
+      ],
+      "responses": [
+        "You are worthy and enough just as you are 💖",
+        "I see you trying — and that's beautiful.",
+        "You matter more than you know.",
+        "You’re not a failure. You’re a human being doing their best.",
+        "You are loved, even when it doesn’t feel like it, {name}."
+      ]
+    },
+    {
+      "tag": "quote_request",
+      "patterns": [
+        "Tell me something nice",
+        "I need motivation",
+        "Give me a quote",
+        "Say something inspiring",
+        "Cheer me up"
+      ],
+      "responses": [
+        "\"This too shall pass.\"",
+        "\"You are braver than you believe, stronger than you seem, and smarter than you think.\" – A.A. Milne",
+        "\"Even the darkest night will end and the sun will rise.\" – Victor Hugo",
+        "\"You don’t have to be perfect to be amazing.\"",
+        "\"Take your time — healing is not a race.\""
+      ]
+    },
+    {
+      "tag": "get_name",
+      "patterns": [
+        "My name is (\\w+)",
+        "I'm (\\w+)",
+        "Call me (\\w+)"
+      ],
+      "responses": [
+        "Nice to meet you, {name} 💜",
+        "Got it! I’ll call you {name} from now on!",
+        "It’s a beautiful name, {name}!"
+      ]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": [
+        "I'm listening 💜",
+        "Tell me more, I'm here for you.",
+        "Hmm, I didn’t catch that — but I'm here.",
+        "That sounds important. Want to explain more?"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thanks",
+        "thank you",
+        "I appreciate it",
+        "grateful",
+        "thank you so much"
+      ],
+      "responses": [
+        "Always here for you, {name} 💜",
+        "You're very welcome!",
+        "I'm glad I could help 🦋",
+        "That's what friends are for 💫"
+      ]
+    },
+    {
+      "tag": "joke",
+      "patterns": ["tell me a joke", "make me laugh", "say something funny", "joke"],
+      "responses": [
+        "Why did the scarecrow win an award? Because he was outstanding in his field!",
+        "I'm reading a book about anti-gravity. It's impossible to put down!",
+        "Why don’t scientists trust atoms? Because they make up everything!"
+      ]
+    }
+
+  ]
+}
